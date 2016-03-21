@@ -16,7 +16,7 @@ ApiUtil = {
   },
   fetchProperties: function (keyword) {
     $.ajax({
-      url: "http://www.onerent.co/api/Property/availableProperties",
+      url: "https://www.onerent.co/api/Property/availableProperties",
       type: "POST",
       dataType: 'json',
       success: function (response) {
