@@ -1,6 +1,7 @@
 var React       = require('react');
 var ReactDOM    = require('react-dom');
 var ReactRouter = require('react-router');
+var Search      = require('./components/Search');
 var IndexRoute  = ReactRouter.IndexRoute;
 var Router      = ReactRouter.Router;
 var Route       = ReactRouter.Route;
@@ -20,7 +21,7 @@ var App = React.createClass({
 
 var routes = (
   <Route path="/" component={App}>
-
+    <IndexRoute component={Search} />
   </Route>
 );
 
