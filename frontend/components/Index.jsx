@@ -1,7 +1,31 @@
 var React       = require('react');
 var IndexItem   = require('./IndexItem');
+var ActiveStore = require('../stores/active');
+
+var _getActiveProperty = function () {
+  return ActiveStore.activeProperty();
+};
 
 var Index = React.createClass({
+  _activePropertyChanged: function () {
+    this.setState({ expanded: _getActiveProperty() });
+  },
+  getInitialState: function () {
+    return{ expanded: _getActiveProperty() };
+  },
+  componentDidMount: function () {
+    this.activeListener = ActiveStore.addListener(this._activePropertyChanged);
+  },
+  componentWillUnmount: function () {
+    this.activeListener.remove();
+  },
+  toggleImages: function (idx, location, e) {
+    if (this.state.expanded === idx) {
+      ApiActions.updateActiveProperty(-1);
+    } else {
+      ApiActions.updateActiveProperty(idx, location);
+    }
+  },
   render: function () {
     var properties,
         numResults = this.props.properties.length;
@@ -20,7 +44,9 @@ var Index = React.createClass({
                 <li className="list-group-item" key={idx}>
                   <IndexItem
                     property={property}
-                    idx={idx}/>
+                    idx={idx}
+                    handleClick={this.toggleImages.bind(null, idx)}
+                    expanded={this.state.expanded}/>
                 </li>
               );
             }.bind(this))}
