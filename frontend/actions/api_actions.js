@@ -14,6 +14,12 @@ ApiActions = {
       actionType: ActiveConstants.PROPERTY_RECEIVED,
       property: property
     });
+  },
+  updateActiveLocation: function (location) {
+    AppDispatcher.dispatch({
+      actionType: ActiveConstants.LOCATION_RECEIVED,
+      location: location
+    });
   }
 };
 
