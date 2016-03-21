@@ -15,3 +15,89 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+#search-box{
+   padding: 3px;
+   border: solid 1px #E4E4E4;
+   border-radius: 6px;
+   background-color: #fff;
+   & > div > form > input{
+     border: 0;
+     box-shadow: none;
+   }
+   & > button{
+     margin: 2px 0 0 0;
+     background: none;
+     box-shadow: none;
+     border: 0;
+     color: #666666;
+     padding: 0 8px 0 10px;
+     border-left: solid 1px #ccc;
+     & :hover{
+       border: 0;
+       box-shadow: none;
+       border-left: solid 1px #ccc;
+     }
+   }
+   & > .glyphicon-search{
+     font-size: 23px;
+   }
+}
+#search-form-glyph{
+  font-size: 24px;
+  border: 0;
+  background: none;
+}
+#slider{
+  padding-top: 10px;
+}
+.logo{
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.thumbnails{
+  list-style: none;
+}
+.search-form{
+  display: inline-table;
+}
+.property-row{
+  margin-bottom: -10px;
+  cursor: pointer;
+}
+.col-xs-10{
+  margin-left: 16px;
+  padding-top: 10px;
+}
+.panel-title{
+  font-weight: bold;
+}
+.location-filter{
+  padding-left: 5px;
+  float: right;
+  cursor: pointer;
+  & > .selected-location{
+    font-weight: bold;
+  }
+}
+.active-location-tab{
+  font-weight: bold;
+}
+.active{
+  background-color: #f5f5f5;
+}
+.container{
+  margin-bottom: 30px;
+}
+.address{
+  font-weight: bold;
+  padding-right: 7px;
+}
+.address-specs{
+  padding: 0 5px;
+}
+.address-specs-expand{
+  padding: 0 5px;
+  color: #bbb !important;
+}
