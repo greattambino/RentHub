@@ -26,15 +26,6 @@ var Index = React.createClass({
       ApiActions.updateActiveProperty(idx, location);
     }
   },
-  // handleLocationChange: function (location, e) {
-  //   if (this.state.selectedLocation !== location) {
-  //     if (location === "All") {
-  //       ApiUtil.fetchAllProperties();
-  //     } else {
-  //       ApiActions.updateLocation(location);
-  //     }
-  //   }
-  // },
   render: function () {
     var properties,
         activeLocationWA,
