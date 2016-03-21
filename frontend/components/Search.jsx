@@ -3,6 +3,7 @@ var PropertyStore = require('../stores/property');
 var ActiveStore   = require('../stores/active');
 var ApiUtil       = require('../util/api_util');
 var Index         = require('./Index');
+var SearchBox     = require('./SearchBox');
 
 var _getActiveLocation = function () {
   return ActiveStore.activeLocation();
@@ -54,6 +55,7 @@ var Search = React.createClass({
   render: function () {
     return(
       <div>
+        <SearchBox />
         <Index
           properties={this.state.properties}
           history={this.props.history}
