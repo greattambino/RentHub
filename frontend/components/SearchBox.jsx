@@ -31,7 +31,7 @@ var SearchBox = React.createClass({
                   </span>
                   <input type="text"
                          className="form-control input-lg"
-                         placeholder="It must have..."
+                         placeholder="It must have...     (i.e. hardwood, balcony, backyard, etc.)"
                          onChange={this.handleChange}
                          onSubmit={this.handleSubmit} />
                 </form>
