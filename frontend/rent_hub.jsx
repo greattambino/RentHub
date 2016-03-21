@@ -6,7 +6,7 @@ var IndexRoute  = ReactRouter.IndexRoute;
 var Router      = ReactRouter.Router;
 var Route       = ReactRouter.Route;
 var root        = document.getElementById('content');
-var logo = "http://res.cloudinary.com/yumblr/image/upload/v1458475250/rentHub_q1hvut.jpg";
+var logo = "https://res.cloudinary.com/yumblr/image/upload/v1458475250/rentHub_q1hvut.jpg";
 
 var App = React.createClass({
   render: function () {
