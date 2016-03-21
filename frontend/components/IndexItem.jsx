@@ -6,7 +6,7 @@ var IndexItem = React.createClass({
   mixins: [ReactRouter.history],
   _fullAddress: function (property) {
     var propertyStreet = property.address;
-    if (propertyStreet !== property.name && property.name) {
+    if (propertyStreet !== property.name && property.name !== "210 9th St. #E103") {
       propertyStreet = propertyStreet + " " + property.name;
     }
     var fullAddress = [propertyStreet, property.city, property.state + " " + property.zip];
